@@ -14,6 +14,10 @@ description: Payroll and HR in Mizan — employees, leave (congés), attendance 
 5. `accounting_controls` once the payroll entries are posted.
 Payslips are downloaded as PDF from the app.
 
+## Employees
+`create_employee` and `update_employee` (dry-run, then confirm). Bank details (RIB) are changed by a
+human in the app.
+
 ## Leave and attendance
 - Balance: `find_employee` → `leave_balance`.
 - Book leave: `request_leave` → `set_leave_status(approved)`, each confirmed.

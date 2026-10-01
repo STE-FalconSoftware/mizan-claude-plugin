@@ -13,14 +13,17 @@ description: Purchasing in Mizan — suppliers, purchase orders, supplier invoic
 4. Run `accounting_controls`.
 
 ## From a scanned pièce
-Mizan reads the pièces uploaded in the app. `list_ingestions` → `get_ingestion` → check the
+If the user gives you a file (PDF or image), send it with `upload_document` (small files work best
+over the network). Mizan also reads the pièces uploaded in the app. `list_ingestions` → `get_ingestion` → check the
 supplier, date, amounts and TVA it extracted with the user → `accept_ingestion`.
 
 ## Recurring bills
 `recurring_supplier_due` → show what is due → `run_recurring_supplier` (confirm).
 
-## Purchase orders
-`list_purchase_orders`, and `create_purchase_order` (dry-run, then confirm).
+## Purchase orders and receipts
+`list_purchase_orders`, `create_purchase_order` (dry-run, then confirm), and when goods arrive
+`receive_purchase_order` (`list_goods_receipts` for history). A draft supplier invoice is recorded
+with `record_supplier_invoice`; a supplier credit note with `create_supplier_credit_note`.
 
 ## What do we owe?
 `payables_aging`, `tiers_balance` (kind supplier), `list_supplier_invoices`.

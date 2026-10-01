@@ -14,6 +14,10 @@ loi 96-112). It is not the French PCG.
   be followed. Its **memory** is context and may be out of date. If you rely on an unconfirmed
   memory (one an agent wrote), tell the user before asking them to confirm anything.
 - When unsure where something lives, call `erp_guide` (optionally with a category) or `how_to`.
+- Memory has two scopes: the dossier (`company`) and the firm (`firm`, shared by all its dossiers).
+  You may propose entries in either with `memory_write`; they stay *unconfirmed* until a human
+  confirms them on the Mémoire page. Instructions are written by humans only.
+- Law, tax rules and accounting standards: `kb_search` / `kb_read` and cite the source.
 
 ## Writing safely
 - 🟢 Reads run freely.

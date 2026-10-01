@@ -14,7 +14,10 @@ The confirm-before-write rules in `mizan-basics` apply to every step.
 4. When the user says yes, call it again with `confirm: true` and give the invoice number.
 5. Run `accounting_controls`.
 
-To quote first, use `create_quote` and check accepted quotes with `list_quotes`.
+To quote first: `create_quote`, then `quote_transition` (send / accept / reject) and, once
+accepted, `convert_quote_to_invoice`. A draft invoice (from a quote, a recurring template or a
+scanned pièce) is issued with `issue_invoice`. Delivery notes: `create_delivery_note`,
+`delivery_note_transition`, `list_delivery_notes`.
 
 ## Credit note (avoir)
 An issued invoice cannot be cancelled. It is corrected with an avoir:
@@ -24,7 +27,9 @@ An issued invoice cannot be cancelled. It is corrected with an avoir:
 - `receivables_aging` for the buckets (0–30, 31–60, 61–90, over 90 days).
 - `tiers_balance` (kind customer) for balances, and `general_ledger` filtered on `customer_id` for
   one customer's statement.
-- Draft a polite reminder for the overdue customers in the user's language. Never send it yourself.
+- For each overdue customer, `record_reminder` files the relance and produces the letter (it does
+  not e-mail anyone); `list_reminders` shows the history. Draft the message in the user's
+  language; a human sends it.
 
 ## Payment received
 `list_treasury_accounts` → `record_payment` (dry-run, then confirm) → `lettrage_suggestions` →

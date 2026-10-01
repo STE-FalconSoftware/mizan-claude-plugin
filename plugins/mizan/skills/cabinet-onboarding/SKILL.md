@@ -17,8 +17,8 @@ standard chart of accounts and makes the accountant its *expert*.
 Mizan e-mails the gérant an invitation, valid for 7 days. They open it, choose their own password,
 and land in their company. Nobody else ever knows their password.
 If sending fails, the dossier is still created and the dialog offers **Réessayer l'invitation**.
-If the invitation was sent but has expired, ask Mizan support to re-send it: today only the
-platform operator can re-invite an e-mail that already has an account.
+If the invitation expired before they used it, click **Renvoyer l'invitation** next to them in
+**Membres** (or in the Cabinet staff list). A new link is sent; at most one every 5 minutes.
 
 ## 3. What the owner can do
 The *gérant* role covers sales, purchases, stock, treasury and payroll, can read the accounting, and
