@@ -11,20 +11,19 @@ dry-run and confirmation step.
 /plugin install mizan@mizan
 ```
 
-Claude Code then asks for two settings:
+Then run `/mcp`, select **mizan** and choose **Authenticate**. Mizan opens in your browser: sign in,
+pick the company and the access level, and confirm with your password. That's it: no token to
+copy, and Claude Code renews the connection on its own.
 
-| Setting | Where to find it |
-|---|---|
-| **Mizan address** | Keep the default unless your accounting firm gave you another one. |
-| **Agent token** | In Mizan: open your company → **Découverte → Assistant IA (MCP)** → choose an access level → copy the token. It is stored in your system keychain. |
+Run `/mizan:status` to check which company and access level the agent sees.
 
-Check with `/mcp` (mizan should be *connected*), then run `/mizan:status`.
+If your accounting firm hosts Mizan at another address, set it in `/plugin` → mizan → Configure.
 
 ## Skills
 
 | Skill | What it does |
 |---|---|
-| `/mizan:connect` | Step-by-step connection and troubleshooting (expired or revoked tokens, wrong company) |
+| `/mizan:connect` | Step-by-step sign-in, switching company or level, and troubleshooting |
 | `/mizan:status` | Which company, access level, instructions and pending work the agent sees |
 | `/mizan:sales` | Quotes, invoices, credit notes, receivables, customer payments |
 | `/mizan:purchases` | Supplier invoices (including scanned pièces), purchase orders, recurring bills |
@@ -40,12 +39,13 @@ codes, TND with 3 decimals, confirm before writing).
 
 ## Access levels
 
-A token belongs to one company and lasts 30 days by default. The agent can never do more than your
-own role allows.
+A connection belongs to one company and lasts at most 90 days. The agent can never do more than
+your own role allows.
 
 - **Lecture**: reads only.
 - **Proposition**: the agent prepares entries that a person approves in *Approbations*.
 - **Écriture**: the agent writes, after showing you a dry-run and getting your confirmation.
 
 Moving real money, deletions, the year-end close, and access or settings changes are never done by
-an agent.
+an agent. Every connection is listed in Mizan under **Découverte → Assistant IA (MCP)**, where you
+can revoke it.

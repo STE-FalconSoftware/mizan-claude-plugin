@@ -29,8 +29,9 @@ company settings stay with the cabinet.
 Send the owner these steps:
 1. In Claude Code: `/plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git`
 2. `/plugin install mizan@mizan`
-3. In Mizan: **Découverte → Assistant IA (MCP)**, choose an access level, copy the token.
-4. `/plugin` → mizan → Configure → paste the token, then run `/mizan:status`.
+3. `/mcp` → mizan → **Authenticate**, sign in to Mizan in the browser, pick their company and an
+   access level, confirm with their password.
+4. `/mizan:status` to check.
 
 ## 5. Firm instructions
 Standing rules for a dossier (which accounts to use, who validates what) go into
