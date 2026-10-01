@@ -1,0 +1,15 @@
+{
+  "name": "mizan",
+  "owner": { "name": "STE Falcon Software", "email": "nabil@ste-falcon-software.com" },
+  "metadata": { "description": "Official Claude Code plugins for Mizan Platform" },
+  "plugins": [
+    {
+      "name": "mizan",
+      "source": "./plugins/mizan",
+      "description": "Run your Mizan Platform accounting and ERP from Claude Code: sales, purchases, bank reconciliation, tax, payroll, month-end close and reports.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "tags": ["accounting", "erp", "tunisia", "mcp"]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "mizan",
+  "displayName": "Mizan Platform",
+  "version": "0.1.0",
+  "description": "Connect Claude Code to your Mizan Platform company: invoices, purchases, bank reconciliation, TVA/RAS declarations, payroll, month-end close and reports, with Mizan's confirm-before-write safety tiers.",
+  "author": {
+    "name": "STE Falcon Software",
+    "email": "nabil@ste-falcon-software.com"
+  },
+  "homepage": "https://mizan.141-94-76-77.sslip.io",
+  "license": "UNLICENSED",
+  "keywords": [
+    "accounting",
+    "erp",
+    "tunisia",
+    "comptabilite",
+    "mcp"
+  ],
+  "userConfig": {
+    "server_url": {
+      "type": "string",
+      "title": "Mizan address",
+      "description": "The address you open Mizan at, without a trailing slash.",
+      "default": "https://mizan.141-94-76-77.sslip.io"
+    },
+    "agent_token": {
+      "type": "string",
+      "title": "Agent token",
+      "description": "In Mizan open Découverte → Assistant IA, choose a company and an access level, and copy the token. It is stored in your system keychain.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}
