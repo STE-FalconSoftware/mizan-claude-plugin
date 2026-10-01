@@ -7,7 +7,7 @@ dry-run and confirmation step.
 ## Install
 
 ```
-/plugin marketplace add STE-FalconSoftware/mizan-claude-plugin
+/plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git
 /plugin install mizan@mizan
 ```
 

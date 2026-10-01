@@ -27,7 +27,7 @@ company settings stay with the cabinet.
 
 ## 4. Their AI agent
 Send the owner these steps:
-1. In Claude Code: `/plugin marketplace add STE-FalconSoftware/mizan-claude-plugin`
+1. In Claude Code: `/plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git`
 2. `/plugin install mizan@mizan`
 3. In Mizan: **Découverte → Assistant IA (MCP)**, choose an access level, copy the token.
 4. `/plugin` → mizan → Configure → paste the token, then run `/mizan:status`.
