@@ -18,16 +18,17 @@ Every preview and result names the company. Never write without an active compan
 did not say which one, ask.
 
 If the connection is for **one company only**, `use_company` refuses other companies. Offer to
-reconnect: `/mcp` → **mizan** → **Clear authentication** → **Authenticate**, and choose either the
-other company or **Tous mes dossiers** on the Mizan page.
+reconnect (see the `connect` skill: disconnect mizan, connect again) and choose either the other
+company or **Tous mes dossiers** on the Mizan page.
 
 ## Change the access level
 
 The level (Lecture, Proposition, Écriture) is chosen on the Mizan sign-in page and cannot be raised
 from the chat, so that a prompt can never give an agent more rights. To change it:
 
-1. `/mcp` → **mizan** → **Clear authentication**.
-2. **Authenticate** again and pick the new level (and the company, or Tous mes dossiers).
-3. `/mizan:status` to check.
+1. Disconnect mizan (Claude app: connectors settings → **mizan** → **Disconnect**; Claude Code:
+   `/mcp` → **mizan** → **Clear authentication**).
+2. Connect again and pick the new level (and the company, or Tous mes dossiers).
+3. Check with the `status` skill.
 
 Recommend the lowest level that does the job, and go back down afterwards.

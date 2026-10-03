@@ -4,7 +4,13 @@ Run your Mizan Platform company from Claude Code: invoices, purchases, bank reco
 TVA and RAS declarations, payroll, month-end close and reports. Every write goes through Mizan's
 dry-run and confirmation step.
 
-## Install
+## Install in the Claude app (Cowork)
+
+Build the plugin file with `python scripts/build_cowork.py` (it lands in `dist/mizan.plugin`; pass
+`--url` for another Mizan address). Add that file in the Claude app, then open the connectors
+settings, choose **mizan** → **Connect** and sign in to Mizan in the browser.
+
+## Install in Claude Code
 
 ```
 /plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git

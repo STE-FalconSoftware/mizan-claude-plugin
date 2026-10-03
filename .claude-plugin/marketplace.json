@@ -12,7 +12,7 @@
       "name": "mizan",
       "source": "./plugins/mizan",
       "description": "Run your Mizan Platform accounting and ERP from Claude Code: sales, purchases, bank reconciliation, tax, payroll, month-end close and reports.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "productivity",
       "tags": [
         "accounting",

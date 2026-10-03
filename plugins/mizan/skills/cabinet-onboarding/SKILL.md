@@ -26,7 +26,7 @@ the company. Pick what the person can do:
 | Personnaliser | Module by module: none, read or write (accounting is read-only for clients) |
 
 The person receives an e-mail, chooses their own password and lands in their company. Nobody else
-ever knows it. The e-mail also links to the guide for connecting Claude Code.
+ever knows it. The e-mail also links to the guide for connecting Claude.
 
 ## 3. Follow up
 **Cabinet → Clients & accès** lists every client user of the firm with their access and status.
@@ -35,9 +35,14 @@ remove someone.
 
 ## 4. Their AI agent
 Send the owner the guide: `{Mizan address}/guide/claude-code`. In short:
-1. `/plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git`
-2. `/plugin install mizan@mizan`
-3. `/mcp` → mizan → **Authenticate**, sign in, pick the company and the level.
+
+- **Claude app (Cowork)**, the usual choice for a business owner: add the `mizan.plugin` file the
+  firm sends them, then in the connectors settings choose **mizan** → **Connect**, sign in, pick the
+  company and the level.
+- **Claude Code**:
+  1. `/plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git`
+  2. `/plugin install mizan@mizan`
+  3. `/mcp` → mizan → **Authenticate**, sign in, pick the company and the level.
 
 ## 5. Firm instructions
 Rules for a dossier or for the whole firm go into **Mémoire → Consignes** (for example "Les frais
