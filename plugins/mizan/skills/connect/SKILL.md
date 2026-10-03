@@ -16,8 +16,15 @@ plain words, one step at a time.
 
 Open the sign-in:
 
-- **Claude app**: open the app's connectors settings, find **mizan** and choose **Connect**.
-- **Claude Code**: run `/mcp`, select **mizan** and choose **Authenticate**.
+- **Claude app** (desktop, claude.ai, Cowork): **Settings → Connectors → Add**, add a custom
+  connector named **Mizan** with the address `https://mizan.141-94-76-77.sslip.io/mcp` (or the
+  address the user's firm gave them, ending in `/mcp`), then **Connect**. A connector that comes
+  with the plugin shows "Connects in sessions" instead and is signed in from inside a session.
+- **Claude Code** in a terminal: run `/mcp`, select **mizan** and choose **Authenticate**. In the
+  desktop app, `/mcp` opens the same Connectors settings as above.
+
+Never set up both a custom connector and the plugin's connector in the same place: Mizan would
+appear twice.
 
 Mizan opens in the browser. Then:
 
@@ -40,7 +47,7 @@ allows, and can never close a period, validate, or change settings, roles or mem
 A connection is tied to one company (or Tous mes dossiers) and one level. To change it, disconnect
 mizan and connect again, then pick the other company or level:
 
-- **Claude app**: connectors settings → **mizan** → **Disconnect**, then **Connect**.
+- **Claude app**: **Settings → Connectors** → **Mizan** → disconnect, then connect again.
 - **Claude Code**: `/mcp` → **mizan** → **Clear authentication**, then **Authenticate**.
 
 ## Remove access
@@ -57,6 +64,6 @@ be revoked. A company administrator can revoke it too. It also ends on its own a
 | "Mot de passe ou code incorrect" | Re-enter the password; after 5 failures the account locks for a while |
 | No company in the list | The account is not a member of any company yet: ask the accounting firm |
 | `403` on a write | The level is Lecture, or the user's role does not allow it: reconnect with another level or ask the firm |
-| mizan missing entirely | The plugin is off: enable it in the app's plugin settings (Claude Code: `/plugin` → enable mizan) |
+| mizan missing entirely | Claude app: add the custom connector (above). Claude Code: `/plugin` → enable mizan |
 
 Never ask the user for their password or a token in the chat. Sign-in happens only in the browser.

@@ -34,11 +34,11 @@ From there: re-send an expired invitation (at most one every 5 minutes), change 
 remove someone.
 
 ## 4. Their AI agent
-Send the owner the guide: `{Mizan address}/guide/claude-code`. In short:
+Send the owner the guide: `{Mizan address}/guide/ia`. In short:
 
-- **Claude app (Cowork)**, the usual choice for a business owner: add the `mizan.plugin` file the
-  firm sends them, then in the connectors settings choose **mizan** → **Connect**, sign in, pick the
-  company and the level.
+- **Claude app** (desktop, claude.ai, Cowork), the usual choice for a business owner:
+  **Settings → Connectors → Add** a custom connector named Mizan with `{Mizan address}/mcp`,
+  **Connect**, sign in, pick the company and the level.
 - **Claude Code**:
   1. `/plugin marketplace add https://github.com/STE-FalconSoftware/mizan-claude-plugin.git`
   2. `/plugin install mizan@mizan`

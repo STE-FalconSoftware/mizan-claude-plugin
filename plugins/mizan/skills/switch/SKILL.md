@@ -26,8 +26,8 @@ company or **Tous mes dossiers** on the Mizan page.
 The level (Lecture, Proposition, Écriture) is chosen on the Mizan sign-in page and cannot be raised
 from the chat, so that a prompt can never give an agent more rights. To change it:
 
-1. Disconnect mizan (Claude app: connectors settings → **mizan** → **Disconnect**; Claude Code:
-   `/mcp` → **mizan** → **Clear authentication**).
+1. Disconnect mizan (Claude app: **Settings → Connectors** → **Mizan** → disconnect; Claude Code
+   in a terminal: `/mcp` → **mizan** → **Clear authentication**).
 2. Connect again and pick the new level (and the company, or Tous mes dossiers).
 3. Check with the `status` skill.
 

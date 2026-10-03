@@ -4,11 +4,16 @@ Run your Mizan Platform company from Claude Code: invoices, purchases, bank reco
 TVA and RAS declarations, payroll, month-end close and reports. Every write goes through Mizan's
 dry-run and confirmation step.
 
-## Install in the Claude app (Cowork)
+## Use in the Claude app (desktop, claude.ai, Cowork)
 
-Build the plugin file with `python scripts/build_cowork.py` (it lands in `dist/mizan.plugin`; pass
-`--url` for another Mizan address). Add that file in the Claude app, then open the connectors
-settings, choose **mizan** → **Connect** and sign in to Mizan in the browser.
+The simplest path needs no plugin: **Settings → Connectors → Add** a custom connector named Mizan
+with the address `https://mizan.141-94-76-77.sslip.io/mcp`, then **Connect** and sign in to Mizan in
+the browser. The step-by-step guide for clients is at `/guide/ia` on the Mizan site.
+
+To add the task skills as well, build the plugin file with `python scripts/build_cowork.py` (it
+lands in `dist/mizan.plugin`; pass `--url` for another Mizan address) and add it in Cowork. Its
+connector shows "Connects in sessions" and asks to sign in on first use; keep only one of the two
+connectors.
 
 ## Install in Claude Code
 
