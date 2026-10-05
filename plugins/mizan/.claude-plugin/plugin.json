@@ -1,7 +1,7 @@
 {
   "name": "mizan",
   "displayName": "Mizan Platform",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Connect Claude Code to your Mizan Platform company: invoices, purchases, bank reconciliation, TVA/RAS declarations, payroll, month-end close and reports, with Mizan's confirm-before-write safety tiers.",
   "author": {
     "name": "STE Falcon Software",
