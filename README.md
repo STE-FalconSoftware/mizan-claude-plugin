@@ -37,6 +37,7 @@ If your accounting firm hosts Mizan at another address, set it in `/plugin` → 
 | `/mizan:connect` | Step-by-step sign-in, switching company or level, and troubleshooting |
 | `/mizan:status` | Which company, access level, instructions and pending work the agent sees |
 | `/mizan:switch` | Switch company inside the session ("passe sur Atlas") or change the access level |
+| `/mizan:dossier-setup` | Get a new company ready to keep books: treasury accounts, opening balances, tiers |
 | `/mizan:sales` | Quotes, invoices, credit notes, receivables, customer payments |
 | `/mizan:purchases` | Supplier invoices (including scanned pièces), purchase orders, recurring bills |
 | `/mizan:bank-reconciliation` | Import a bank statement and match it |

@@ -28,7 +28,8 @@ from the chat, so that a prompt can never give an agent more rights. To change i
 
 1. Disconnect mizan (Claude app: **Settings → Connectors** → **Mizan** → disconnect; Claude Code
    in a terminal: `/mcp` → **mizan** → **Clear authentication**).
-2. Connect again and pick the new level (and the company, or Tous mes dossiers).
-3. Check with the `status` skill.
+2. Connect again and pick the new level (and the company, or Tous mes dossiers). The new
+   authorization replaces the previous one of the same app; the old level stops working.
+3. Check with the `status` skill: `access_level` must show the new level.
 
 Recommend the lowest level that does the job, and go back down afterwards.
