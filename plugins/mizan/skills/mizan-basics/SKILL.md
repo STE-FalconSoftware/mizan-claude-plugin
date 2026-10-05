@@ -46,9 +46,16 @@ loi 96-112). It is not the French PCG.
   `postable_only`) or use `find_account`, never dump it whole.
 - Fiscal periods are lazy: an empty `list_fiscal_periods` means every month is open. Nothing has to
   be "opened" before posting.
+- Lists (`list_invoices`, `list_supplier_invoices`, `list_credit_notes`, `list_payments`) are
+  paged: filter by tier and dates, follow `next_cursor`. Never pull a whole ledger to find one item.
+- Account codes you pass (charge, revenue, fees, RAS accounts) must exist and be postable in this
+  dossier's chart; a preview flags unknown ones with the closest real accounts. Never invent one.
 - A wrong customer or supplier record (country, residency, matricule, TVA regime, address) is
   corrected with `update_customer` / `update_supplier`, which keep every other field. A foreign
   supplier gets `country` (ISO-2), `is_resident: false` and its `foreign_tax_id`.
+- Files: when you have a shell, `create_upload_link` (purpose `upload_document`,
+  `attach_document` or `stage_bank_statement`) returns a one-time `curl` command that sends the file
+  directly; the link expires in 15 minutes. Use `content_base64` only for small files.
 - Supporting documents (PDF, scans, photos) go through `upload_document`: Mizan reads the text
   layer or, for a scan, the image, and proposes the extracted data. Never invent figures you could
   not read.

@@ -28,6 +28,10 @@ copy, and Claude Code renews the connection on its own.
 
 Run `/mizan:status` to check which company and access level the agent sees.
 
+**"Unknown skill" after an install or update?** The session started before the plugin was
+installed or updated. Run `/reload-plugins` (or restart Claude Code); the Mizan tools may work
+while the skills are still missing, because they load separately.
+
 If your accounting firm hosts Mizan at another address, set it in `/plugin` → mizan → Configure.
 
 ## Skills
