@@ -10,10 +10,11 @@ The simplest path needs no plugin: **Settings → Connectors → Add** a custom 
 with the address `https://mizan.141-94-76-77.sslip.io/mcp`, then **Connect** and sign in to Mizan in
 the browser. The step-by-step guide for clients is at `/guide/ia` on the Mizan site.
 
-To add the task skills as well, build the plugin file with `python scripts/build_cowork.py` (it
-lands in `dist/mizan.plugin`; pass `--url` for another Mizan address) and add it in Cowork. Its
-connector shows "Connects in sessions" and asks to sign in on first use; keep only one of the two
-connectors.
+To get the task skills too, install the plugin from this repository, which keeps it up to date:
+**Customize → Plugins → Add marketplace**, enter `STE-FalconSoftware/mizan-claude-plugin`, turn on
+**Sync automatically**, then install **mizan** and connect it from its **Connectors** tab. Keep only
+one Mizan connector (remove the custom one above if you added it). Offline alternative: upload
+`dist/mizan.plugin` built with `python scripts/build_cowork.py`.
 
 ## Install in Claude Code
 
@@ -32,7 +33,8 @@ Run `/mizan:status` to check which company and access level the agent sees.
 installed or updated. Run `/reload-plugins` (or restart Claude Code); the Mizan tools may work
 while the skills are still missing, because they load separately.
 
-If your accounting firm hosts Mizan at another address, set it in `/plugin` → mizan → Configure.
+The plugin connects to `https://mizan.141-94-76-77.sslip.io/mcp`. A firm hosting Mizan elsewhere builds
+its own copy with `python scripts/build_cowork.py --url https://its-address`.
 
 ## Skills
 

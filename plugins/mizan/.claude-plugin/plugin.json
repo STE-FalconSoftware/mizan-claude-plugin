@@ -1,7 +1,7 @@
 {
   "name": "mizan",
   "displayName": "Mizan Platform",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Connect Claude Code to your Mizan Platform company: invoices, purchases, bank reconciliation, TVA/RAS declarations, payroll, month-end close and reports, with Mizan's confirm-before-write safety tiers.",
   "author": {
     "name": "STE Falcon Software",
@@ -15,13 +15,5 @@
     "tunisia",
     "comptabilite",
     "mcp"
-  ],
-  "userConfig": {
-    "server_url": {
-      "type": "string",
-      "title": "Mizan address",
-      "description": "The address you open Mizan at, without a trailing slash. Keep the default unless your accounting firm gave you another one.",
-      "default": "https://mizan.141-94-76-77.sslip.io"
-    }
-  }
+  ]
 }

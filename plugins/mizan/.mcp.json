@@ -2,7 +2,7 @@
   "mcpServers": {
     "mizan": {
       "type": "http",
-      "url": "${user_config.server_url}/mcp"
+      "url": "https://mizan.141-94-76-77.sslip.io/mcp"
     }
   }
 }
